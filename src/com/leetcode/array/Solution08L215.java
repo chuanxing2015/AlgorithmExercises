@@ -15,17 +15,52 @@ package com.leetcode.array;
 public class Solution08L215 {
 
     public static int findKthLargest(int[] nums, int k) {
-        
+        if(nums.length == 1 && k == 1) {
+            return nums[0];
+        }
+        int key = sort(nums,0,nums.length-1,nums.length-k);
+        return key;
+    }
 
-        return nums[nums.length -k];
+
+    public static int sort(int[] nums, int l,int h,int k){
+
+        int low = l;
+        int high = h;
+
+        while (low < high){
+            while (high > low && nums[high] > nums[low]){
+                high--;
+            }
+            if(high > low){
+                int temp = nums[high];
+                nums[high] = nums[low];
+                nums[low] = temp;
+                low++;
+            }
+            while (high > low && nums[high] > nums[low]){
+                low++;
+            }
+            if(high > low){
+                int temp = nums[high];
+                nums[high] = nums[low];
+                nums[low] = temp;
+                high --;
+            }
+        }
+
+        if(k > low){
+           return sort(nums,low+1,h,k) ;
+        }else if(k < low){
+            return sort(nums,l,low-1,k);
+        }
+
+        return nums[low];
     }
 
     public static void main(String[] args){
-        int[] arr = {5, 2, 1, 8, 6, 4};
-        findKthLargest(arr,1);
-        for(int a: arr){
-            System.out.println(a);
-        }
+        int[] arr = {5,1,2};
+        System.out.println(findKthLargest(arr,1));
     }
 
 
