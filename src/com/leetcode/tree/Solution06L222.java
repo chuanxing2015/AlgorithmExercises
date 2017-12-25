@@ -1,29 +1,39 @@
 package com.leetcode.tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Solution06L222 {
 
     public int countNodes(TreeNode root) {
         if(root == null){
            return 0;
         }
-        int size = 0;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()){
-            TreeNode node = queue.poll();
-            size++;
-            if(node.right != null) {
-                queue.offer(node.right);
-            }
-            if(node.left != null){
-                queue.offer(node.left);
-            }
+        int left = getLeft(root);
+        int right = getRight(root);
+        if(left == right){
+            return (2<<left)-1;
+        }else {
+            return countNodes(root.left) + countNodes(root.right) +1;
         }
+    }
 
-        return size;
+
+    private int getLeft(TreeNode node){
+        int count = 0;
+        TreeNode treeNode = node;
+        while (treeNode.left!= null){
+            count++;
+            treeNode = treeNode.left;
+        }
+        return count;
+    }
+
+    private int getRight(TreeNode node){
+        int count = 0;
+        TreeNode treeNode = node;
+        while (treeNode.right!= null){
+            count++;
+            treeNode = treeNode.right;
+        }
+        return count;
     }
 
 
