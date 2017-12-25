@@ -1,7 +1,7 @@
 package com.leetcode.link;
 
 
-public class Solution01L92 {
+public class Solution01L92_1 {
 
     /**
      * 链表部分反转
@@ -106,7 +106,7 @@ public class Solution01L92 {
     }
 
     public static void main(String[] args){
-        Solution01L92 solution01L92 = new Solution01L92();
+        Solution01L92_1 solution01L92 = new Solution01L92_1();
         solution01L92.add(1);
         solution01L92.add(2);
         solution01L92.add(3);
