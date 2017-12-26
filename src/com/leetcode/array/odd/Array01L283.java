@@ -2,7 +2,7 @@ package com.leetcode.array.odd;
 
 import java.util.Arrays;
 
-public class Solution01L283 {
+public class Array01L283 {
 
     /*
     *
@@ -39,7 +39,7 @@ public class Solution01L283 {
     public static void main(String[] args) {
         int[] nums = new int[]{0,1,0,3,12};
         System.out.println(Arrays.toString(nums));
-        new Solution01L283().moveZeroes(nums);
+        new Array01L283().moveZeroes(nums);
         System.out.println(Arrays.toString(nums));
     }
 }

@@ -1,6 +1,6 @@
 package com.leetcode.array.odd;
 
-public class Solution11L076 {
+public class Array11L076 {
     /*
      * 数组11 - 最小窗口子串 - 困难 - 76
      *

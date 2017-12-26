@@ -1,6 +1,6 @@
 package com.leetcode.array.odd;
 
-public class Solution09L209 {
+public class Array09L209 {
     /*
      * 数组09 - 最小尺寸子数组之和 - 中等 - 209
      *
@@ -42,7 +42,7 @@ public class Solution09L209 {
     public static void main(String[] args) {
         int[] nums = new int[] {2, 3, 1, 2, 4, 3};
         int s = 8;
-        int minSubArrayLen = new Solution09L209().minSubArrayLen(s, nums);
+        int minSubArrayLen = new Array09L209().minSubArrayLen(s, nums);
         System.out.println(minSubArrayLen);
     }
 }

@@ -1,6 +1,6 @@
 package com.leetcode.array.odd;
 
-public class Solution05L167 {
+public class Array05L167 {
     /*
      * 数组05 - 两数的和（输入数组已排序） - 简单 - 167
      *

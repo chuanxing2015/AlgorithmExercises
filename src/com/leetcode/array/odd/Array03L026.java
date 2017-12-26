@@ -1,6 +1,6 @@
 package com.leetcode.array.odd;
 
-public class Solution03L026 {
+public class Array03L026 {
     /*
      * 数组03 - 从有序数组中删除重复元素 - 简单 - 26
      *

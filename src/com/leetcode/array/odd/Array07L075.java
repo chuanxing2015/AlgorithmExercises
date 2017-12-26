@@ -1,6 +1,6 @@
 package com.leetcode.array.odd;
 
-public class Solution07L075 {
+public class Array07L075 {
     /*
      * 数组07 - 排序颜色 - 中等 - 75
      *

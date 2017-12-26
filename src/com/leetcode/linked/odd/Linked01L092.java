@@ -1,6 +1,11 @@
 package com.leetcode.linked.odd;
 
-public class Solution01L092 {
+
+import com.leetcode.util.ListNode;
+
+import static com.leetcode.util.Util.list;
+
+public class Linked01L092 {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null) return null;
@@ -31,11 +36,7 @@ public class Solution01L092 {
         return head;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
+
 
     public static void main(String[] args) {
         ListNode head,n1 = new ListNode(1);
@@ -50,16 +51,9 @@ public class Solution01L092 {
 //        n4.next = n5;
 
         list(head);
-        head = new Solution01L092().reverseBetween(head, 1, 1);
+        head = new Linked01L092().reverseBetween(head, 1, 1);
         list(head);
     }
 
-    static void list(ListNode head) {
-        ListNode tmp = head;
-        while (tmp != null) {
-            System.out.printf(tmp.val + " -> ");
-            tmp = tmp.next;
-        }
-        System.out.println();
-    }
+
 }
